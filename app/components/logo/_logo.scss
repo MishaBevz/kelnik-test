@@ -1,0 +1,33 @@
+.logo {
+    width: 34px;
+    height: 85px;
+    z-index: 11;
+    &_header {
+        margin-left: 106px;
+        margin-right: 14%;
+        @media screen and (max-width: 1480px) {
+            margin-left: 90px
+        }
+        @media screen and (max-width: 1380px) {
+            margin-left: 80px
+        }
+        @media screen and (max-width: 1290px) {
+            width: 32px;
+            height: 74px;
+        }
+        @media screen and (max-width: 1220px) {
+            margin-left: 60px;
+            margin-right: 12%; 
+            width: 30px;
+            height: 68px;
+        } 
+        @media screen and (max-width: 1140px) {
+            margin-left: 40px;    
+        }         
+        @media screen and (max-width: 1023px) {
+            width: 27px;
+            height: 55px; 
+            margin-left: 30px;
+        } 
+    }
+}

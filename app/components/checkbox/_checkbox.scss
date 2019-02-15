@@ -1,0 +1,122 @@
+input[type="checkbox"]:checked + label:after {
+    opacity: 1;
+}
+input[type="checkbox"]:checked + label:before {
+    opacity: 0;
+}
+input[type="checkbox"]:checked + label.checkbox__label_theme_filter {
+    border-bottom: 1px dotted rgba(80, 115, 146, 0.7);
+}
+
+.checkbox {
+    position: relative;
+    &__input {
+        visibility: hidden;
+        margin: 0;
+    }
+    &__label {
+        position: absolute;
+        cursor: pointer;
+        &:after {
+            content: "";
+            position: absolute;
+            background-repeat: no-repeat;
+            opacity: 0;
+        }
+    }
+}
+.checkbox__label-text {
+    width: max-content;
+    width: -moz-max-content;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: left;
+    margin-left: 27px;
+    &_theme_footer {
+        white-space: nowrap;
+        @media screen and (max-width: 1280px) {
+            font-size: 15px;
+        }
+        @media screen and (max-width: 390px) {
+            font-size: 14px;
+        }
+    }
+    
+}
+.checkbox_theme_product {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+.checkbox_theme_filter {
+    margin-left: 10px;
+    margin-right: 55px;
+    transition: 0.3s opacity;
+    @media screen and (max-width: 1023px) {
+        margin-left: 0px;
+    }
+    &:hover {
+        opacity: .6;
+    }
+}
+.checkbox {
+    &__input_theme_filter {
+        width: 18px;
+        height: 18px; 
+    }
+    &__label_theme_filter {       
+        &:before {
+            content: "";
+            width: 18px;
+            height: 18px; 
+            background-image: url('./components/filter/hight-low.png');
+            top: 0px;
+            right: -29px;
+            position: absolute;
+        }
+        &:after {
+            width: 18px;
+            height: 18px;
+            background-image: url('./components/filter/low-hight.png');
+            top: 0px;
+            right: -29px;
+        }
+    }
+    &__input_theme_product {
+        width: 19px;
+        height: 18px;   
+    }
+    &__label_theme_product {
+        right: 0;
+        top: 0;
+        background-image: url('./components/products/check.svg');
+        width: 19px;
+        height: 18px;
+        &:after {
+            width: 19px;
+            height: 18px;
+            background-image: url('./components/products/checked.svg');
+            top: 0px;
+            right: 0px;
+        }
+    }
+    &__input_theme_subscribe-form {
+        width: 18px;
+        height: 18px;
+    }  
+    &__label_theme_subscribe-form {   
+        top: 0;
+        left: 0;
+        border-radius: 2px;
+        background-color:  #ffffff;
+        width: 18px;
+        height: 18px;
+        &:after {
+            width: 18px;
+            height: 18px;
+            background-image: url('./components/subscribe-form/check.svg');
+            top: 3px;
+            left: 3px;
+        }
+    }
+}

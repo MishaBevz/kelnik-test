@@ -1,0 +1,13 @@
+.footer.footer-page
+    .footer__block 
+        h2.footer__title Успей купить!
+        p.footer__title-desc Подпишись и успей словить все акции
+    form.subscribe-form(method="post" name="subscribeForm" action="#") 
+        .subscribe-form__alert
+        .subscribe-form__block 
+            input(type="email" class="subscribe-form__email-input" placeholder="E-mail" required)
+            .checkbox 
+                input(type="checkbox" id="checkbox__input" class="checkbox__input checkbox__input_theme_subscribe-form")
+                label(for="checkbox__input" class="checkbox__label checkbox__label_theme_subscribe-form") 
+                    span.checkbox__label-text.checkbox__label-text_theme_footer подписаться на новости
+        button.link.subscribe-form__button Подписаться

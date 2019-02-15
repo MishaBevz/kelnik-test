@@ -1,0 +1,28 @@
+@import '../products/products.scss';
+.content {
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 0.5s;
+    @media screen and (max-width: 1023px) {
+        align-items: center;
+    }
+}
+.content__title {
+    color:  #002f2f;
+    font-size: 48px;
+    font-weight: 700;
+    margin-left: 106px;
+    margin-bottom: 63px;
+    @media screen and (max-width: 1023px) {
+        margin-left: 0px;
+        font-size: 35px;
+    }
+    @media screen and (max-width: 460px) {
+        margin-left: 0px;
+        font-size: 30px;
+    }
+    @media screen and (max-width: 350px) {
+        font-size: 25px;
+    }
+}

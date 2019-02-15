@@ -1,0 +1,16 @@
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Kelnik test
+        link(href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet")
+        link(rel="stylesheet" type="text/css" href="main.css")
+    body.page
+        include ./components/header/header
+        include ./components/content/content
+        include ./components/up-button/up-button
+        include ./components/footer/footer
+
+        script(src="bundle.js")
+    

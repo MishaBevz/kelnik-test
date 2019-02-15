@@ -1,0 +1,23 @@
+.filter {  
+    &_theme_products {
+        margin-left: 106px;
+        margin-top: 31px;
+        margin-bottom: 41px;
+        color:  #002f2f;
+        font-size: 14px;
+        display: flex;
+        @media screen and (max-width: 1023px){
+            margin-left: 0;
+            justify-content: center;
+        }
+        @media screen and (max-width: 360px){
+            font-size: 10px;
+        }  
+    }
+    &-price {
+
+    }
+    &-room {
+
+    }
+}
