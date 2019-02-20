@@ -37,12 +37,12 @@ export function setFilter(filter) {
             productsList.appendChild(product);
         })
     }
-    if(filter === "room") {     
+    else if(filter === "room") {     
         for(let i = 0; i < products.length; i++) {
             productsArr.push(products[i]);
         }
         productsArr.sort(function(a, b) {
-            return +a.querySelector('.product__header').getAttribute('data-product-room') - +b.querySelector('.product__header').getAttribute('data-product-room');
+            return +a.querySelector('.product__header').getAttribute('data-product-rooms') - +b.querySelector('.product__header').getAttribute('data-product-rooms');
         });  
         if(roomFilterButton.firstElementChild.checked) { // Если фильтр выбран на возрастание
             productsArr.reverse()
