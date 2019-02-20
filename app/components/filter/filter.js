@@ -26,11 +26,14 @@ export function setFilter(filter) {
     if(filter === "price") {
         for(let i = 0; i < products.length; i++) {
             productsArr.push(products[i]);
-        }  
-        productsArr.sort(function(a, b) {
+        }
+        productsArr.sort(function(a, b) { // Вначале сортируем по кв. метрам (Зачем, написал в комменте ниже)
+            return +a.querySelector('.product__header').getAttribute('data-product-square') - +b.querySelector('.product__header').getAttribute('data-product-square');
+        });
+        productsArr.sort(function(a, b) { // Затем по цене. В итоге, если будет одинаковая цена между квартирами, дополнительная сортировка на кв. метры поможет отсортировать точней
             return +a.querySelector('.product__header').getAttribute('data-product-price') - +b.querySelector('.product__header').getAttribute('data-product-price');       
         });
-        if(priceFilterButton.firstElementChild.checked) { // Если фильтр выбран на возрастание
+        if(!priceFilterButton.firstElementChild.checked) {
             productsArr.reverse()
         }
         productsArr.forEach(function(product) {
@@ -41,10 +44,13 @@ export function setFilter(filter) {
         for(let i = 0; i < products.length; i++) {
             productsArr.push(products[i]);
         }
-        productsArr.sort(function(a, b) {
+        productsArr.sort(function(a, b) { // Вначале сортируем по кв. метрам (Зачем, написал в комменте ниже)
+            return +a.querySelector('.product__header').getAttribute('data-product-square') - +b.querySelector('.product__header').getAttribute('data-product-square');
+        });
+        productsArr.sort(function(a, b) { // Затем по комнатам. В итоге между одинаковым кол-вом комнат, дополнительная сортировка на кв. метры поможет отсортировать точней
             return +a.querySelector('.product__header').getAttribute('data-product-rooms') - +b.querySelector('.product__header').getAttribute('data-product-rooms');
         });  
-        if(roomFilterButton.firstElementChild.checked) { // Если фильтр выбран на возрастание
+        if(!roomFilterButton.firstElementChild.checked) {
             productsArr.reverse()
         }
         productsArr.forEach(function(product) {
