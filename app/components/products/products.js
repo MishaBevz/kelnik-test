@@ -36,7 +36,7 @@ export default (function products () {
                     if(item.attributes.favorite) {
                         checkboxFavorite = `<input class="checkbox__input checkbox__input_theme_product" type="checkbox" id="checkbox__input-product${index+1}" name="favoriteProduct" checked/><label class="checkbox__label checkbox__label_theme_product" for="checkbox__input-product${index+1}"></label>`;
                     }
-                    product.innerHTML = `<div class="product__header" data-product-price="${+item.price.replace(/[^-0-9]/gim,'')}" data-product-rooms="${+item.rooms}">
+                    product.innerHTML = `<div class="product__header" data-product-price="${+item.price.replace(/[^-0-9]/gim,'')}" data-product-rooms="${+item.rooms}" data-product-square="${+item.description.square.replace(/[^-0-9]/gim,'')}">
                                             <div class="product__header-block">
                                                 <div class="product__discount">
                                                     ${discountPercent}
